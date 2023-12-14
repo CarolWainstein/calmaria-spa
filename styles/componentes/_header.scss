@@ -1,0 +1,133 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+
+header {
+    background: variaveis.$gradiente-primario; // usar variaveis. apenas quando as variaveis estiverem em outro arquivo.
+    padding: 2rem;
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+        .linha {
+            border-top: 1px solid black;
+            width: 80%;
+        }
+        ul {
+            display: inline-flex;
+            gap: 2rem;
+            li {
+                list-style-type: none;
+                & a:hover {
+                    font-weight: 700;
+                }
+            }
+            a {
+                text-decoration: none;
+                @include mixins.ff-fs-color(variaveis.$ft-textos, 1rem, variaveis.$cor-primaria);
+                font-weight: 500;
+            }
+        }
+    }
+    #home {
+        max-width: 1040px;
+
+        /* Passamos isso para o mixins:
+        width: 80%;
+        margin: 0 auto;
+        */
+
+        @include mixins.margem-central(80%);
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .textos-home {
+            max-width: 464px;
+            h1 {
+                font-size: 42px;
+                color: variaveis.$cor-primaria;
+                margin-bottom: 2rem;
+                font-family: variaveis.$ft-titulos;
+                span {
+                    color: variaveis.$cor-secundaria;
+                }
+            }
+        }
+        .img-home {
+            max-width: 474px;
+            img {
+                width: 100%;
+            }
+        }
+        .btn-main {
+            background-color: variaveis.$cor-secundaria;
+            color: #fff;
+            border-radius: 40px;
+            padding: 1rem 3rem;
+            font-family: variaveis.$ft-textos;
+            font-weight: 500;
+            font-size: 18px;
+            border-style: none;
+            transition: .3s;
+            &:hover {
+                background: variaveis.$cor-terciaria;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1513px) {
+    header {
+        max-width: 100vw; /* Define a largura máxima em relação à largura da viewport */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        #home {
+            @include mixins.margem-central(100%);
+            flex-direction: column-reverse;
+            text-align: center;
+            .textos-home {
+                h1 {
+                    font-size: 25px;
+                }
+            } 
+            .btn-main {
+                font-size: 14px;
+            }
+        }
+            
+    }
+
+}
+
+@media screen and (max-width: 412px) {
+    header {
+        max-width: 100vw; /* Define a largura máxima em relação à largura da viewport */
+        margin-left: -8%;
+        nav {
+            ul {
+             margin-left: -8%;
+            }   
+        }
+            
+        #home {
+            @include mixins.margem-central(90%);
+            flex-direction: column-reverse;
+            text-align: center;
+            .textos-home {
+                h1 {
+                    font-size: 25px;
+                }
+            } 
+            .btn-main {
+                font-size: 14px;
+            }
+            .img-home {
+                margin-left: -8%;
+            }
+        }
+            
+    }
+
+}

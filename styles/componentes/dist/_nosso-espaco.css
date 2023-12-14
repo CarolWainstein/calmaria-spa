@@ -1,0 +1,113 @@
+@charset "UTF-8";
+#nosso-espaco {
+  margin: 0 auto;
+  width: 80%;
+}
+#nosso-espaco .detalhes {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+#nosso-espaco .detalhes .imgs-espaco {
+  max-width: 500px;
+}
+#nosso-espaco .detalhes .espaco-textos {
+  max-width: 500px;
+}
+#nosso-espaco .detalhes .espaco-textos .titulo {
+  font-family: "Krona One", sans-serif;
+  font-size: 1.8rem;
+  color: #4e75ff;
+  font-weight: 500;
+}
+#nosso-espaco .detalhes .espaco-textos .infos {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #0C0421;
+}
+#nosso-espaco .detalhes .espaco-textos .separador {
+  width: 100%;
+}
+#nosso-espaco .detalhes:nth-child(2) {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1513px) {
+  #nosso-espaco {
+    max-width: 100vw;
+    /* Define a largura máxima em relação à largura da viewport */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+  }
+  #nosso-espaco .detalhes {
+    gap: 4em;
+    align-items: center;
+    text-align: center;
+  }
+  #nosso-espaco .detalhes .img-outro {
+    display: none;
+  }
+  #nosso-espaco .detalhes2 {
+    justify-content: center;
+    gap: 4em;
+  }
+}
+@media screen and (max-width: 412px) {
+  #nosso-espaco {
+    max-width: 100vw;
+    /* Define a largura máxima em relação à largura da viewport */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+  }
+  #nosso-espaco .detalhes {
+    gap: 2em;
+    margin: 0 auto;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #nosso-espaco .detalhes .img-espaco {
+    width: 95%;
+    height: auto;
+  }
+  #nosso-espaco .detalhes .espaco-textos {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  #nosso-espaco .detalhes .img-outro1 {
+    display: none;
+  }
+  #nosso-espaco .detalhes2 {
+    width: 90vw;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 412px) {
+  #nosso-espaco {
+    max-width: 100vw;
+    /* Define a largura máxima em relação à largura da viewport */
+    margin: 0 auto;
+    /* Centraliza o conteúdo */
+  }
+  #nosso-espaco .detalhes {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  #nosso-espaco .detalhes .img-espaco {
+    width: 95%;
+    height: auto;
+  }
+  #nosso-espaco .detalhes .espaco-textos {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  #nosso-espaco .detalhes .img-outro1 {
+    display: none;
+  }
+  #nosso-espaco .detalhes2 {
+    width: 100vw;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,53 @@
+@use '../abstract/variaveis';
+@use '../abstract/mixins';
+
+#servico {
+    background: variaveis.$gradiente-primario;
+    padding: 5rem 0;
+    .cards {
+        @include mixins.margem-central(80%);
+        display: flex;
+        gap: 1.5rem;
+        .card {
+            background: variaveis.$gradiente-secundario;
+            padding: 1rem 1.5rem;
+            text-align: center;
+            border: 1px solid white;
+            border-radius: 3rem;
+            &-titulo{ // '&'representa o nome do elemento pai
+                @include mixins.ff-fs-color(variaveis.$ft-titulos, 1.6rem, variaveis.$cor-primaria);
+            }
+            &-texto {
+                @include mixins.ff-fs-color(variaveis.$ft-textos, 1.2rem, variaveis.$cor-primaria);
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 1513px) {
+    #servico {
+        max-width: 100vw; /* Define a largura máxima em relação à largura da viewport */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        padding: 1em;
+        .cards {
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+        }
+        
+    }
+}
+
+@media screen and (max-width: 412px) {
+    #servico {
+        max-width: 100vw; /* Define a largura máxima em relação à largura da viewport */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        .cards {
+            @include mixins.margem-central(95%);
+            display: flex;
+            flex-direction: column; 
+        }
+        
+    }
+}

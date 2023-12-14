@@ -1,0 +1,14 @@
+@charset "UTF-8";
+footer {
+  width: 100vw;
+  /* Define a largura máxima em relação à largura da viewport */
+  margin: 0 auto;
+  /* Centraliza o conteúdo */
+  background: #E8F5C8;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  color: #0C0421;
+}
